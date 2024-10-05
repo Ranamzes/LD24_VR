@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x3fkf7vu8pg"
-path.bptc="res://.godot/imported/creature_Tex.png-2ef51e9f2afa14b8551d78af4bf1a58b.bptc.ctex"
+uid="uid://bslut3aftpgs4"
+path.s3tc="res://.godot/imported/gnom2.png-379497f038e977e1fa9c0cf59900d2a7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,13 +11,13 @@ metadata={
 
 [deps]
 
-source_file="res://Models/creature_Tex.png"
-dest_files=["res://.godot/imported/creature_Tex.png-2ef51e9f2afa14b8551d78af4bf1a58b.bptc.ctex"]
+source_file="res://Models/gnom2.png"
+dest_files=["res://.godot/imported/gnom2.png-379497f038e977e1fa9c0cf59900d2a7.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=true
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

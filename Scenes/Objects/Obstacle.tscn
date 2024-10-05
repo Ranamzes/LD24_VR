@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://g3ky8v6t2yc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tmimn"]
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.670684, 0)
+mesh = SubResource("BoxMesh_tmimn")
+skeleton = NodePath("../..")
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0503001, -0.456285, 0)
+radius = 2.0
+vertices = PackedVector3Array(-1, 0, 1, -1, 0, -1, 1, 0, -1, 1, 0, 1)
+use_3d_avoidance = true

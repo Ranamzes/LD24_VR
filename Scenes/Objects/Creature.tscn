@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://w3qqf1t2cj7x"]
+
+[ext_resource type="Script" path="res://Scripts/creature_movement.gd" id="1_0fvdm"]
+[ext_resource type="PackedScene" uid="uid://buqk5yilbeay8" path="res://Models/creatureb.gltf" id="1_blecu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cehjq"]
+height = 1.39493
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_0fvdm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.729707, 0)
+shape = SubResource("CapsuleShape3D_cehjq")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_max_distance = 15.01
+path_postprocessing = 1
+simplify_path = true
+avoidance_enabled = true
+radius = 1.0
+time_horizon_obstacles = 2.0
+use_3d_avoidance = true
+debug_enabled = true
+
+[node name="creatureb" parent="." instance=ExtResource("1_blecu")]
+
+[node name="Creature" type="Node3D" parent="."]
+
+[connection signal="link_reached" from="NavigationAgent3D" to="Creature" method="_on_navigation_agent_3d_link_reached"]
+[connection signal="target_reached" from="NavigationAgent3D" to="Creature" method="_on_navigation_agent_3d_target_reached"]
+[connection signal="waypoint_reached" from="NavigationAgent3D" to="Creature" method="_on_navigation_agent_3d_waypoint_reached"]

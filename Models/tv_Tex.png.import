@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x3fkf7vu8pg"
-path.bptc="res://.godot/imported/creature_Tex.png-2ef51e9f2afa14b8551d78af4bf1a58b.bptc.ctex"
+uid="uid://b364xm01deibp"
+path.s3tc="res://.godot/imported/tv_Tex.png-7b5b6f1f049f3929896f4e082d6fe38a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,13 +11,13 @@ metadata={
 
 [deps]
 
-source_file="res://Models/creature_Tex.png"
-dest_files=["res://.godot/imported/creature_Tex.png-2ef51e9f2afa14b8551d78af4bf1a58b.bptc.ctex"]
+source_file="res://Models/tv_Tex.png"
+dest_files=["res://.godot/imported/tv_Tex.png-7b5b6f1f049f3929896f4e082d6fe38a.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=true
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0

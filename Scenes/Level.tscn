@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://do6b3bv524q51"]
+[gd_scene load_steps=12 format=3 uid="uid://do6b3bv524q51"]
 
 [ext_resource type="PackedScene" uid="uid://dwm0aqi3tpgsx" path="res://Models/wall3.gltf" id="1_wben8"]
 [ext_resource type="PackedScene" uid="uid://dlo561vv1vg25" path="res://Models/wall2.gltf" id="2_mktcd"]
@@ -6,7 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://bvng4f5qhcgrm" path="res://Models/table.gltf" id="4_n1u8f"]
 [ext_resource type="PackedScene" uid="uid://3goeymrkuplw" path="res://Models/chair2.gltf" id="5_bw8nu"]
 [ext_resource type="PackedScene" uid="uid://ccc1p3k4xcqyi" path="res://Models/chair1.gltf" id="6_ya0ub"]
-[ext_resource type="PackedScene" uid="uid://cn8txbnvxv63q" path="res://Models/creature.gltf" id="7_bs4tv"]
+[ext_resource type="PackedScene" uid="uid://cggq5xewotuxh" path="res://Models/fridge.gltf" id="7_qyiqo"]
+[ext_resource type="PackedScene" uid="uid://b0fsw0fp0m281" path="res://Models/sofa.gltf" id="8_llpji"]
+[ext_resource type="PackedScene" uid="uid://cab521m3yvb63" path="res://Models/tv.gltf" id="9_ne3oa"]
+[ext_resource type="ArrayMesh" uid="uid://cm1k30g06umwm" path="res://Models/gnom2.obj" id="10_eudhf"]
+[ext_resource type="PackedScene" uid="uid://d2qew52iyuehv" path="res://Scenes/Objects/walk_with_rifle.tscn" id="11_cb8u8"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -46,6 +50,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -24, 0
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -24)
 
 [node name="wall14" parent="Floor" instance=ExtResource("1_wben8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12, 0, -24)
+
+[node name="wall28" parent="Floor" instance=ExtResource("1_wben8")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12, 0, -24)
 
 [node name="wall15" parent="Floor" instance=ExtResource("1_wben8")]
@@ -192,20 +199,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0639, 0, -26.0815)
 [node name="chair14" parent="." instance=ExtResource("6_ya0ub")]
 transform = Transform3D(0.584448, 0, -0.811431, 0.0683504, -0.996446, 0.0492306, -0.808547, -0.0842344, -0.582371, 14.7453, 8.83191, -3.80557)
 
-[node name="creature2" parent="." instance=ExtResource("7_bs4tv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6012, 0, -6.19061)
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9637, 0, 13.7611)
 
-[node name="creature3" parent="." instance=ExtResource("7_bs4tv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205849, 0, -20.2355)
+[node name="fridge2" parent="." instance=ExtResource("7_qyiqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82139, 0, -43.3912)
 
-[node name="creature4" parent="." instance=ExtResource("7_bs4tv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36987, 0, -12.0892)
+[node name="sofa2" parent="." instance=ExtResource("8_llpji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34603, 0, -7.75811)
 
-[node name="creature5" parent="." instance=ExtResource("7_bs4tv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4148, 5.73304, -28.8439)
+[node name="tv2" parent="." instance=ExtResource("9_ne3oa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71172, 3.17957, -20.8367)
 
-[node name="creature6" parent="." instance=ExtResource("7_bs4tv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.469111, 3.22518, -36.6754)
+[node name="Gnom2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.885, -0.453553, -7.14546)
+mesh = ExtResource("10_eudhf")
 
-[node name="creature7" parent="." instance=ExtResource("7_bs4tv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1149, 4.52573, -20.5873)
+[node name="Gnom3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.885, -0.453553, -17.658)
+mesh = ExtResource("10_eudhf")
+
+[node name="Gnom4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.885, -0.453553, -17.658)
+mesh = ExtResource("10_eudhf")
+
+[node name="Gnom5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0442, -0.453553, -17.658)
+mesh = ExtResource("10_eudhf")
+
+[node name="Gnom6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.35895, 4.55774, -2.86244)
+mesh = ExtResource("10_eudhf")
+
+[node name="Walk With Rifle" parent="." instance=ExtResource("11_cb8u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8459, 6.76016, -4.62848)
+
+[node name="Walk With Rifle2" parent="." instance=ExtResource("11_cb8u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4672, 8.31765, -9.64799)
+
+[node name="Walk With Rifle3" parent="." instance=ExtResource("11_cb8u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4672, -8.07528, -17.8958)
+
+[node name="Walk With Rifle4" parent="." instance=ExtResource("11_cb8u8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162556, 2.95685, -29.6967)

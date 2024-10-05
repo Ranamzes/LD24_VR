@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x3fkf7vu8pg"
-path.bptc="res://.godot/imported/creature_Tex.png-2ef51e9f2afa14b8551d78af4bf1a58b.bptc.ctex"
+uid="uid://1pxmkk8atetq"
+path.bptc="res://.godot/imported/creature.png-c85967876ea72b30372a9b4b1f388a6c.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/creature_Tex.png"
-dest_files=["res://.godot/imported/creature_Tex.png-2ef51e9f2afa14b8551d78af4bf1a58b.bptc.ctex"]
+source_file="res://Models/creature.png"
+dest_files=["res://.godot/imported/creature.png-c85967876ea72b30372a9b4b1f388a6c.bptc.ctex"]
 
 [params]
 

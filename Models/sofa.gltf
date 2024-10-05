@@ -15,13 +15,13 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"creature"
+			"name":"sofa"
 		}
 	],
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"creature_Material",
+			"name":"sofa_Material",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
@@ -33,7 +33,7 @@
 	],
 	"meshes":[
 		{
-			"name":"creature",
+			"name":"sofa",
 			"primitives":[
 				{
 					"attributes":{
@@ -58,94 +58,94 @@
 	"images":[
 		{
 			"mimeType":"image/png",
-			"name":"creature_Tex",
-			"uri":"creature_Tex.png"
+			"name":"sofa_Tex",
+			"uri":"sofa_Tex.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":849,
+			"count":440,
 			"max":[
-				0.49839073419570923,
-				1.406275749206543,
-				0.35451361536979675
+				5.340888977050781,
+				3.1112165451049805,
+				3.1943211555480957
 			],
 			"min":[
-				-0.5016092658042908,
-				0.0062757134437561035,
-				-0.4454863965511322
+				-5.55911111831665,
+				0.01121664047241211,
+				-3.8056788444519043
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":849,
+			"count":440,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":849,
+			"count":440,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5121,
-			"count":849,
+			"count":440,
 			"normalized":true,
 			"type":"VEC4"
 		},
 		{
 			"bufferView":4,
 			"componentType":5126,
-			"count":849,
+			"count":440,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":5,
 			"componentType":5123,
-			"count":1518,
+			"count":870,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":10188,
+			"byteLength":5280,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":10188,
-			"byteOffset":10188,
+			"byteLength":5280,
+			"byteOffset":5280,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":6792,
-			"byteOffset":20376,
+			"byteLength":3520,
+			"byteOffset":10560,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3396,
-			"byteOffset":27168,
+			"byteLength":1760,
+			"byteOffset":14080,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":10188,
-			"byteOffset":30564,
+			"byteLength":5280,
+			"byteOffset":15840,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3036,
-			"byteOffset":40752,
+			"byteLength":1740,
+			"byteOffset":21120,
 			"target":34963
 		}
 	],
@@ -157,8 +157,8 @@
 	],
 	"buffers":[
 		{
-			"byteLength":43788,
-			"uri":"creature.bin"
+			"byteLength":22860,
+			"uri":"sofa.bin"
 		}
 	]
 }
