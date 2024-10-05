@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://b88275ao5au8b"]
+
+[ext_resource type="PackedScene" uid="uid://dku8t7mmcwe01" path="res://Scenes/Objects/Platform.tscn" id="1_b1f60"]
+[ext_resource type="PackedScene" uid="uid://w3qqf1t2cj7x" path="res://Scenes/Objects/Creature.tscn" id="2_amlqn"]
+[ext_resource type="PackedScene" uid="uid://g3ky8v6t2yc" path="res://Scenes/Objects/Obstacle.tscn" id="3_y1ra7"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_e5x0g"]
+
+[node name="Navmesh" type="Node3D"]
+
+[node name="Platform" parent="." instance=ExtResource("1_b1f60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0446707, -0.411343, 0.0519774)
+
+[node name="NavigationLink3D" type="NavigationLink3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.712, 0.305408, 6.44121)
+start_position = Vector3(-5, 0, 0)
+end_position = Vector3(5, 0, 0)
+travel_cost = 0.0
+
+[node name="Platform2" parent="." instance=ExtResource("1_b1f60")]
+transform = Transform3D(0.999325, 0, -0.0367484, 0, 1, 0, 0.0367484, 0, 0.999325, 26.8811, 0, 0.0519774)
+
+[node name="Creature" parent="." node_paths=PackedStringArray("movement_target") instance=ExtResource("2_amlqn")]
+transform = Transform3D(-0.818972, 0, 0.573834, 0, 1, 0, -0.573834, 0, -0.818972, -8.37922, -0.388773, 9.04987)
+movement_target = NodePath("../Target")
+
+[node name="Camera3D" type="Camera3D" parent="Creature"]
+transform = Transform3D(-0.571978, -0.321234, 0.754751, 0.000965282, 0.919863, 0.39224, -0.820268, 0.225081, -0.525831, 1.56904, 2.41311, -1.09939)
+
+[node name="Target" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1144, 2.38419e-06, -6.36315)
+mesh = SubResource("CylinderMesh_e5x0g")
+skeleton = NodePath("../Creature")
+
+[node name="Obstacle" parent="." instance=ExtResource("3_y1ra7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3276, 0.149028, -2.56737)
+
+[node name="Obstacle2" parent="." instance=ExtResource("3_y1ra7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21067, 0.149028, 3.89569)
+
+[node name="Obstacle3" parent="." instance=ExtResource("3_y1ra7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.58692, 0.149028, 3.89569)

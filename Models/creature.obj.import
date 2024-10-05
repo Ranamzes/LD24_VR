@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://le2okevgront"
+path="res://.godot/imported/creature.obj-54ce3a63f463a36070975fe05f95e499.mesh"
+
+[deps]
+
+files=["res://.godot/imported/creature.obj-54ce3a63f463a36070975fe05f95e499.mesh"]
+
+source_file="res://Models/creature.obj"
+dest_files=["res://.godot/imported/creature.obj-54ce3a63f463a36070975fe05f95e499.mesh", "res://.godot/imported/creature.obj-54ce3a63f463a36070975fe05f95e499.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
