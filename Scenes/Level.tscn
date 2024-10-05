@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://do6b3bv524q51"]
+
+[ext_resource type="ArrayMesh" uid="uid://2bqbkgcsc5to" path="res://Models/table.vox" id="1_gh77t"]
+[ext_resource type="ArrayMesh" uid="uid://da7joc668ii1t" path="res://Models/wall1.vox" id="2_jekih"]
+[ext_resource type="ArrayMesh" uid="uid://bd3bf1iu21qll" path="res://Models/wall2.vox" id="3_qppi8"]
+[ext_resource type="ArrayMesh" uid="uid://co1sw8jfytd0g" path="res://Models/chair1.vox" id="4_yll6g"]
+[ext_resource type="ArrayMesh" uid="uid://cujwi0obfjdr2" path="res://Models/chair2.vox" id="5_eefvh"]
+[ext_resource type="ArrayMesh" uid="uid://586uxu8n7353" path="res://Models/creature.vox" id="6_asnch"]
+
+[node name="Level" type="Node3D"]
+
+[node name="Table" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0426, -2.24436, -6.38)
+mesh = ExtResource("1_gh77t")
+
+[node name="Wall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21459, 0, -19.5012)
+mesh = ExtResource("2_jekih")
+
+[node name="Wall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.71331, 0, -19.5497)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0302594, 0, 0.999542, 0, 1, 0, -0.999542, 0, 0.0302594, -12.0996, 0, -13.3578)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0302594, 0, 0.999542, 0, 1, 0, -0.999542, 0, 0.0302594, -12.4291, 0, -0.321313)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000622088, 0.999789, 0.0205491, -0.030253, 0.0205585, -0.999331, -0.999542, 0, 0.0302594, -7.06006, -3.5202, -0.321313)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000622088, 0.999789, 0.0205491, -0.030253, 0.0205585, -0.999331, -0.999542, 0, 0.0302594, -7.06006, -3.5202, 12.6976)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000622088, 0.999789, 0.0205491, -0.030253, 0.0205585, -0.999331, -0.999542, 0, 0.0302594, -7.06006, -3.5202, -13.4652)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000622088, 0.999789, 0.0205491, -0.030253, 0.0205585, -0.999331, -0.999542, 0, 0.0302594, 6.28183, -3.5202, -13.4652)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000622088, 0.999789, 0.0205491, -0.030253, 0.0205585, -0.999331, -0.999542, 0, 0.0302594, 6.28183, -3.5202, -0.127868)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.000622088, 0.999789, 0.0205491, -0.030253, 0.0205585, -0.999331, -0.999542, 0, 0.0302594, 6.28183, -3.5202, 13.3061)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0302594, 0, 0.999542, 0, 1, 0, -0.999542, 0, 0.0302594, -12.0996, 0, 13.0277)
+mesh = ExtResource("3_qppi8")
+
+[node name="Wall3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0696, 0, -18.7748)
+mesh = ExtResource("3_qppi8")
+
+[node name="Chair1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.65603, -2.50494, -5.77259)
+mesh = ExtResource("4_yll6g")
+
+[node name="Chair2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2349, -2.19769, -1.40692)
+mesh = ExtResource("5_eefvh")
+
+[node name="Creature" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27443, 1.76992, -6.73806)
+mesh = ExtResource("6_asnch")
+
+[node name="Creature2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.831799, -3.93458, 13.5316)
+mesh = ExtResource("6_asnch")
+
+[node name="Creature3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.27596, -3.93458, 8.63607)
+mesh = ExtResource("6_asnch")
+
+[node name="Creature4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5788, -3.93458, 8.25437)
+mesh = ExtResource("6_asnch")
+
+[node name="Creature5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56663, -3.93458, 3.13393)
+mesh = ExtResource("6_asnch")
+
+[node name="Table2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1443, -2.89282, 2.78209)
+mesh = ExtResource("1_gh77t")
+
+[node name="Chair3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4531, -2.43122, 10.9099)
+mesh = ExtResource("5_eefvh")
+
+[node name="Chair4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.576035, -2.24436, -13.6407)
+mesh = ExtResource("4_yll6g")
