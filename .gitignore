@@ -3,4 +3,5 @@
 /android/
 .history/
 .cursorrules
-
+.cursorignore
+.git/

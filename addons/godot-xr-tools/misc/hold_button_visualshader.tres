@@ -253,7 +253,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(72.5475, 214.725)
 flags/unshaded = true
 flags/alpha_to_coverage = true
 nodes/fragment/0/position = Vector2(1800, -40)
