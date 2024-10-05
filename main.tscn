@@ -1,10 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3cgaeyq3lnkm"]
+[gd_scene load_steps=3 format=3 uid="uid://dgo5yw5t8j6xs"]
 
-[ext_resource type="PackedScene" uid="uid://dp52uesedm04j" path="res://Scenes/player.tscn" id="1_enlhd"]
-[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="2_bolxw"]
+[ext_resource type="PackedScene" uid="uid://bnqnnnet4dw12" path="res://addons/godot-xr-tools/staging/staging.tscn" id="1_wdal8"]
+[ext_resource type="Texture2D" uid="uid://cnewalibjuv4o" path="res://Sprites/loading.png" id="2_r1mv8"]
 
-[node name="Main" type="Node3D"]
+[node name="main" instance=ExtResource("1_wdal8")]
+main_scene = "res://Scenes/start_level.tscn"
 
-[node name="XROrigin3D" parent="." instance=ExtResource("1_enlhd")]
-
-[node name="StartXR" parent="." instance=ExtResource("2_bolxw")]
+[node name="LoadingScreen" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0658806, 0, 0)
+splash_screen = ExtResource("2_r1mv8")
+enable_press_to_continue = true
