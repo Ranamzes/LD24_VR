@@ -176,7 +176,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2442, 0, -20.1119)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4872, 1.01009, -28.0913)
 
 [node name="table4" parent="." instance=ExtResource("4_n1u8f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4872, 1.01009, -4.22688)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4872, 0.0999776, -4.22688)
 
 [node name="table5" parent="." instance=ExtResource("4_n1u8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3515, 1.01009, -4.22688)
