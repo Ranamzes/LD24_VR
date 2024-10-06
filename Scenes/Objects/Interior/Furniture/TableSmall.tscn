@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://l6pwet8voplb"]
+
+[ext_resource type="ArrayMesh" uid="uid://dh0aougiiuoip" path="res://Models/New/small_Table.obj" id="1_sscon"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lsvwp"]
+size = Vector3(2.99304, 1.49947, 7.00355)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_coe2f"]
+vertices = PackedVector3Array(-1.39705, -1.86547, -3.63525, -1.39705, -1.86547, 3.61475, 1.35295, -1.86547, 3.61475, 1.35295, -1.86547, -3.63525)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4rbci"]
+
+[node name="TableSmall" type="StaticBody3D"]
+collision_mask = 524289
+
+[node name="Model" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_sscon")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76, 0)
+shape = SubResource("BoxShape3D_lsvwp")
+
+[node name="Navigation" type="Node3D" parent="."]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Navigation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.036, 0)
+navigation_mesh = SubResource("NavigationMesh_coe2f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/NavigationRegion3D"]
+transform = Transform3D(1.89705, 0, 0, 0, 1, 0, 0, 0, 4.13525, 0, -2.36547, 0)
+visible = false
+mesh = SubResource("PlaneMesh_4rbci")

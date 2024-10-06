@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ftt7pnw2pxs4"]
+
+[ext_resource type="PackedScene" uid="uid://blx5yt6vqkrr2" path="res://Models/Gnome/Happy Idle.fbx" id="1_yqvv4"]
+[ext_resource type="PackedScene" uid="uid://cq4hknl2ony7p" path="res://Models/Gnome/Anims/Happy Idle.fbx" id="2_x2yj0"]
+
+[node name="Happy Idle" instance=ExtResource("1_yqvv4")]
+
+[node name="Happy Idle" parent="." index="0" instance=ExtResource("2_x2yj0")]

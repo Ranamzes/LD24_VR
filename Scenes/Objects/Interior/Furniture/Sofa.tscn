@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmo8byxxfd1rl"]
+
+[ext_resource type="ArrayMesh" uid="uid://c1g3f3kwrpfk1" path="res://Models/New/sofa.obj" id="1_p3x1w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lsvwp"]
+size = Vector3(3.06299, 1.60321, 7.03763)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sumfa"]
+size = Vector3(10.717, 3.60699, 2.80811)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_coe2f"]
+vertices = PackedVector3Array(2.02593, -1.4156, -0.555394, 1.02593, -1.4156, -0.555394, 0.77593, -1.4156, 3.19461, 2.02593, -1.4156, 4.19461, -6.97407, -1.4156, 4.19461, -6.97407, -1.4156, 3.19461)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 2, 4), PackedInt32Array(4, 2, 3)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sseri"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4rbci"]
+
+[node name="Sofa" type="StaticBody3D"]
+collision_mask = 524289
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.981192, 0, -0.337792)
+mesh = ExtResource("1_p3x1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87305, 1.93469, -1.45404)
+shape = SubResource("BoxShape3D_lsvwp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18982, 1.79037, 0.56665)
+shape = SubResource("BoxShape3D_sumfa")
+
+[node name="Navigation" type="Node3D" parent="."]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Navigation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.03572, -3.51404)
+navigation_mesh = SubResource("NavigationMesh_coe2f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Navigation/NavigationRegion3D"]
+transform = Transform3D(4.00528, 0, 0, 0, 1, 0, 0, 0, 1, -3.46879, -1.90448, 3.75354)
+visible = false
+mesh = SubResource("PlaneMesh_sseri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Navigation/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.91922, 1.55319, -1.9156, 1.86383)
+visible = false
+mesh = SubResource("PlaneMesh_4rbci")
