@@ -1,0 +1,50 @@
+{
+	"categories": [
+		{
+			"uuid": "789a92d6-542e-4d9b-b3f5-38218990c0b0",
+			"title": "Task",
+			"color": "e777b2"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "f60b27a8-6504-4025-90c1-9607ce999f2d",
+			"title": "Todo",
+			"tasks": [
+				"83de95dd-0fea-4f77-88fd-67fbf049080b"
+			]
+		},
+		{
+			"uuid": "c40c2fc5-1727-4e89-9249-165a76b472f1",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "423e9ba2-e8ee-4396-b024-0e5937d943d2",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "83de95dd-0fea-4f77-88fd-67fbf049080b",
+			"title": "Vignette fix",
+			"description": "",
+			"category": "789a92d6-542e-4d9b-b3f5-38218990c0b0",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"f60b27a8-6504-4025-90c1-9607ce999f2d"
+			],
+			[
+				"c40c2fc5-1727-4e89-9249-165a76b472f1"
+			],
+			[
+				"423e9ba2-e8ee-4396-b024-0e5937d943d2"
+			]
+		]
+	}
+}
