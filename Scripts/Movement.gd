@@ -15,17 +15,13 @@ var last_position: Vector3 = Vector3.ZERO
 func _ready() -> void:
     super._ready()
 
-    if vignette:
-        vignette.visible = true
-        vignette.auto_adjust = true
+    # Проверка и вывод предупреждений, если какие-то узлы отсутствуют
+    if !movement_direct:
+        print("WARNING: MovementDirect node not found!")
+    if !player_body:
+        print("WARNING: PlayerBody node not found!")
 
-    if xr_camera:
-        last_position = xr_camera.global_position
-
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
     if xr_camera and vignette:
         var current_position = xr_camera.global_position
-        var speed: float = (current_position - last_position).length() / delta
         last_position = current_position
-
-        vignette.update_vignette(speed)

@@ -2,27 +2,27 @@
 class_name XRToolsVignette
 extends Node3D
 
-@export var radius : float = 1.0: set = set_radius
-@export var fade : float = 0.05: set = set_fade
-@export var steps : int = 32: set = set_steps
+@export var radius: float = 1.0: set = set_radius
+@export var fade: float = 0.05: set = set_fade
+@export var steps: int = 32: set = set_steps
 
-@export var auto_adjust : bool = true: set = set_auto_adjust
-@export var auto_inner_radius : float = 0.35
-@export var auto_fade_out_factor : float = 1.5
-@export var auto_fade_delay : float = 1.0
-@export var auto_rotation_limit : float = 20.0: set = set_auto_rotation_limit
-@export var auto_velocity_limit : float = 10.0
+@export var auto_adjust: bool = true: set = set_auto_adjust
+@export var auto_inner_radius: float = 0.35
+@export var auto_fade_out_factor: float = 1.5
+@export var auto_fade_delay: float = 1.0
+@export var auto_rotation_limit: float = 20.0: set = set_auto_rotation_limit
+@export var auto_velocity_limit: float = 10.0
 
-var material : ShaderMaterial = preload("res://addons/godot-xr-tools/effects/vignette.tres")
+var material: ShaderMaterial = preload("res://addons/godot-xr-tools/effects/vignette.tres")
 
 var auto_first = true
 var fade_delay = 0.0
 var origin_node = null
-var last_origin_basis : Basis
-var last_location : Vector3
+var last_origin_basis: Basis
+var last_location: Vector3
 @onready var auto_rotation_limit_rad = deg_to_rad(auto_rotation_limit)
 
-func set_radius(new_radius : float) -> void:
+func set_radius(new_radius: float) -> void:
 	radius = new_radius
 	if is_inside_tree():
 		_update_radius()
@@ -35,7 +35,7 @@ func _update_radius() -> void:
 	else:
 		$Mesh.visible = false
 
-func set_fade(new_fade : float) -> void:
+func set_fade(new_fade: float) -> void:
 	fade = new_fade
 	if is_inside_tree():
 		_update_fade()
@@ -45,21 +45,21 @@ func _update_fade() -> void:
 		material.set_shader_parameter("fade", fade)
 
 
-func set_steps(new_steps : int) -> void:
+func set_steps(new_steps: int) -> void:
 	steps = new_steps
 	if is_inside_tree():
 		_update_mesh()
 
 func _update_mesh() -> void:
-	var vertices : PackedVector3Array
-	var indices : PackedInt32Array
+	var vertices: PackedVector3Array
+	var indices: PackedInt32Array
 
 	vertices.resize(2 * steps)
 	indices.resize(6 * steps)
 	for i in steps:
-		var v : Vector3 = Vector3.RIGHT.rotated(Vector3.FORWARD, deg_to_rad((360.0 * i) / steps))
+		var v: Vector3 = Vector3.RIGHT.rotated(Vector3.FORWARD, deg_to_rad((360.0 * i) / steps))
 		vertices[i] = v
-		vertices[steps+i] = v * 2.0
+		vertices[steps + i] = v * 2.0
 
 		var off = i * 6
 		var i2 = ((i + 1) % steps)
@@ -72,7 +72,7 @@ func _update_mesh() -> void:
 
 	# update our mesh
 	var arr_mesh = ArrayMesh.new()
-	var arr : Array
+	var arr: Array
 	arr.resize(ArrayMesh.ARRAY_MAX)
 	arr[ArrayMesh.ARRAY_VERTEX] = vertices
 	arr[ArrayMesh.ARRAY_INDEX] = indices
@@ -82,7 +82,7 @@ func _update_mesh() -> void:
 	$Mesh.mesh = arr_mesh
 	$Mesh.set_surface_override_material(0, material)
 
-func set_auto_adjust(new_auto_adjust : bool) -> void:
+func set_auto_adjust(new_auto_adjust: bool) -> void:
 	auto_adjust = new_auto_adjust
 	if is_inside_tree() and !Engine.is_editor_hint():
 		_update_auto_adjust()
@@ -93,13 +93,13 @@ func _update_auto_adjust() -> void:
 	if auto_adjust:
 		set_process(true)
 
-func set_auto_rotation_limit(new_auto_rotation_limit : float) -> void:
+func set_auto_rotation_limit(new_auto_rotation_limit: float) -> void:
 	auto_rotation_limit = new_auto_rotation_limit
 	auto_rotation_limit_rad = deg_to_rad(auto_rotation_limit)
 
 
 # Add support for is_xr_class on XRTools classes
-func is_xr_class(name : String) -> bool:
+func is_xr_class(name: String) -> bool:
 	return name == "XRToolsVignette"
 
 

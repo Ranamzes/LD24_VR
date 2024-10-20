@@ -1,12 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgo5yw5t8j6xs"]
+[gd_scene load_steps=8 format=3 uid="uid://dgo5yw5t8j6xs"]
 
-[ext_resource type="PackedScene" uid="uid://bnqnnnet4dw12" path="res://addons/godot-xr-tools/staging/staging.tscn" id="1_wdal8"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/staging/staging.gd" id="1_fdr8x"]
+[ext_resource type="PackedScene" uid="uid://wtpox7m5vu2b" path="res://addons/godot-xr-tools/effects/fade.tscn" id="2_3tc1f"]
 [ext_resource type="Texture2D" uid="uid://cnewalibjuv4o" path="res://Sprites/loading.png" id="2_r1mv8"]
+[ext_resource type="Environment" uid="uid://ckiwtcdsam7ed" path="res://addons/godot-xr-tools/staging/staging_env.tres" id="3_vkcgl"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="4_7hdlr"]
+[ext_resource type="PackedScene" uid="uid://bqumugyvkct4r" path="res://addons/godot-xr-tools/staging/loading_screen.tscn" id="5_t51ms"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="7_p8d4t"]
 
-[node name="main" instance=ExtResource("1_wdal8")]
+[node name="main" type="Node3D"]
+script = ExtResource("1_fdr8x")
 main_scene = "res://Scenes/start_level.tscn"
 
-[node name="LoadingScreen" parent="." index="2"]
+[node name="Fade" parent="." instance=ExtResource("2_3tc1f")]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+environment = ExtResource("3_vkcgl")
+
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" instance=ExtResource("4_7hdlr")]
+
+[node name="LeftHandController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"left_hand"
+pose = &"aim"
+
+[node name="RightHandController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"right_hand"
+pose = &"aim"
+
+[node name="LoadingScreen" parent="." instance=ExtResource("5_t51ms")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0658806, 0, 0)
 splash_screen = ExtResource("2_r1mv8")
+progress = 0.0
 enable_press_to_continue = true
+
+[node name="Scene" type="Node3D" parent="."]
+
+[node name="StartXR" parent="." instance=ExtResource("7_p8d4t")]
+
+[connection signal="xr_ended" from="StartXR" to="." method="_on_StartXR_xr_ended"]
+[connection signal="xr_started" from="StartXR" to="." method="_on_StartXR_xr_started"]
