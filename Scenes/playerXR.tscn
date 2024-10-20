@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://ye0pr4y8ucnf"]
+[gd_scene load_steps=11 format=3 uid="uid://ye0pr4y8ucnf"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_4iocd"]
 [ext_resource type="Script" path="res://Scripts/Movement.gd" id="2_s1vya"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="3_2cq30"]
 [ext_resource type="PackedScene" uid="uid://cc6ngdqie8o8c" path="res://addons/godot-xr-tools/effects/vignette.tscn" id="3_iyj1l"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="4_sgm1k"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="4_u8sx4"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_r0g2i"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="6_vv85h"]
@@ -13,16 +14,9 @@
 [node name="PlayerXR" instance=ExtResource("1_4iocd")]
 script = ExtResource("2_s1vya")
 
-[node name="Vignette" parent="XROrigin3D/XRCamera3D" index="0" instance=ExtResource("3_iyj1l")]
-radius = null
-fade = null
-steps = null
-auto_adjust = null
-auto_inner_radius = null
-auto_fade_out_factor = null
-auto_fade_delay = null
-auto_rotation_limit = null
-auto_velocity_limit = null
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" index="0" instance=ExtResource("4_sgm1k")]
+
+[node name="Vignette" parent="XROrigin3D/XRCamera3D" index="1" instance=ExtResource("3_iyj1l")]
 
 [node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" index="0" instance=ExtResource("3_2cq30")]
 
@@ -32,7 +26,6 @@ strafe = true
 [node name="RightPhysicsHand" parent="XROrigin3D/RightHand" index="0" instance=ExtResource("4_u8sx4")]
 
 [node name="MovementJump" parent="XROrigin3D/RightHand" index="1" instance=ExtResource("8_j6g5l")]
-jump_button_action = null
 
 [node name="MovementTurn" parent="XROrigin3D/RightHand" index="2" instance=ExtResource("7_k2q4r")]
 turn_mode = 1
