@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyahpenecgjsp"]
+
+[ext_resource type="PackedScene" uid="uid://cdlcuweou6c3l" path="res://Scenes/Objects/Interior/Wall.tscn" id="1_j2ec2"]
+[ext_resource type="PackedScene" uid="uid://dlo561vv1vg25" path="res://Models/wall2.gltf" id="2_ng8rt"]
+
+[node name="Wall" instance=ExtResource("1_j2ec2")]
+
+[node name="wall4" parent="." index="1" instance=ExtResource("2_ng8rt")]
+
+[node name="wall3" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00399399, 0.0380349, -0.0124702)
+visible = false
