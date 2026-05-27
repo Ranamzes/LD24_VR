@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://ye0pr4y8ucnf"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_4iocd"]
-[ext_resource type="Script" path="res://Scripts/Movement.gd" id="2_s1vya"]
+[ext_resource type="Script" uid="uid://d2popllficlay" path="res://Scripts/Movement.gd" id="2_s1vya"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="3_2cq30"]
 [ext_resource type="PackedScene" uid="uid://cc6ngdqie8o8c" path="res://addons/godot-xr-tools/effects/vignette.tscn" id="3_iyj1l"]
 [ext_resource type="PackedScene" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="4_sgm1k"]
@@ -17,6 +17,9 @@ script = ExtResource("2_s1vya")
 [node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" index="0" instance=ExtResource("4_sgm1k")]
 
 [node name="Vignette" parent="XROrigin3D/XRCamera3D" index="1" instance=ExtResource("3_iyj1l")]
+auto_fade_out_factor = 1.0
+auto_rotation_limit = 10.0
+auto_velocity_limit = 5.0
 
 [node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" index="0" instance=ExtResource("3_2cq30")]
 

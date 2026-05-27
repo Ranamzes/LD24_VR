@@ -11,13 +11,17 @@
 			"uuid": "f60b27a8-6504-4025-90c1-9607ce999f2d",
 			"title": "Todo",
 			"tasks": [
-				"83de95dd-0fea-4f77-88fd-67fbf049080b"
+				"dd36d2e9-bdad-43f2-9660-d4a8509b49f8",
+				"5b168405-67c4-4eeb-aa13-8b92803102c7",
+				"6e7da5aa-95a9-4a50-bab8-f31bad4a0cec"
 			]
 		},
 		{
 			"uuid": "c40c2fc5-1727-4e89-9249-165a76b472f1",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"83de95dd-0fea-4f77-88fd-67fbf049080b"
+			]
 		},
 		{
 			"uuid": "423e9ba2-e8ee-4396-b024-0e5937d943d2",
@@ -29,6 +33,27 @@
 		{
 			"uuid": "83de95dd-0fea-4f77-88fd-67fbf049080b",
 			"title": "Vignette fix",
+			"description": "",
+			"category": "789a92d6-542e-4d9b-b3f5-38218990c0b0",
+			"steps": []
+		},
+		{
+			"uuid": "dd36d2e9-bdad-43f2-9660-d4a8509b49f8",
+			"title": "Выключать бег после остановки игрока",
+			"description": "",
+			"category": "789a92d6-542e-4d9b-b3f5-38218990c0b0",
+			"steps": []
+		},
+		{
+			"uuid": "5b168405-67c4-4eeb-aa13-8b92803102c7",
+			"title": "Замедлить скорость при передвижении сидя",
+			"description": "",
+			"category": "789a92d6-542e-4d9b-b3f5-38218990c0b0",
+			"steps": []
+		},
+		{
+			"uuid": "6e7da5aa-95a9-4a50-bab8-f31bad4a0cec",
+			"title": "Хватать гномов",
 			"description": "",
 			"category": "789a92d6-542e-4d9b-b3f5-38218990c0b0",
 			"steps": []
